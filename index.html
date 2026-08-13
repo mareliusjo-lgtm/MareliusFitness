@@ -18,6 +18,47 @@
     @media(max-width:900px){.navLinks{display:none}.hero{grid-template-columns:1fr;gap:45px}.carousel{height:480px}.statementInner,.aboutGrid,.reviews,.contactInner{grid-template-columns:1fr}.services{grid-template-columns:1fr}.service,.service+.service{padding:35px 0;border-right:0;border-bottom:1px solid var(--line)}.contactLinks{grid-column:auto;max-width:600px}.portraitFrame{justify-self:center}}
     @media(max-width:560px){.shell{width:min(100% - 28px,1180px)}.nav{height:75px}.navCta{font-size:0}.navCta span{font-size:18px}.hero{padding:48px 0}.hero h1{font-size:52px;letter-spacing:-3.5px}.heroActions{align-items:flex-start;flex-direction:column}.carousel{height:420px}.statement,.about,.reviews,.contact{padding:75px 0}.services{padding:45px 0 70px}.portraitFrame{width:270px}.reviewForm{padding:25px}.footerInner{align-items:flex-start;flex-direction:column}}
   </style>
+  <style>
+    @media(max-width:560px){
+      body{overflow-x:hidden}
+      .shell{width:calc(100% - 32px)}
+      .nav{height:68px;gap:12px}
+      .logo{font-size:12px;line-height:1.2;max-width:190px}
+      .logoMark{width:28px;height:28px;flex:0 0 28px}
+      .navCta{font-size:0;padding:8px 0}
+      .navCta span{font-size:20px;margin:0}
+      .hero{min-height:auto;padding:42px 0 56px;gap:36px}
+      .kicker{font-size:9px;letter-spacing:1.5px}
+      .hero h1{font-size:clamp(43px,13vw,56px);line-height:.98;letter-spacing:-3px;margin:20px 0 24px}
+      .lead{font-size:16px;line-height:1.6}
+      .heroActions{margin-top:28px;gap:18px}
+      .button{min-width:175px;padding:15px 18px}
+      .carousel{height:min(112vw,470px);border-radius:2px}
+      .slide{padding:20px}
+      .slideCaption strong{font-size:18px;max-width:210px}
+      .carouselControls{right:16px;bottom:16px;gap:10px}
+      .carouselControls button{width:32px;height:32px}
+      .statement{padding:70px 0}
+      .statementInner{gap:28px}
+      .statement h2,.about h2,.reviews h2,.contact h2{font-size:clamp(38px,12vw,50px);line-height:1.04;letter-spacing:-2.5px}
+      .statementText{margin:0}
+      .services{padding:28px 0 65px}
+      .service,.service+.service{padding:30px 0}
+      .service h3{margin:20px 0 10px}
+      .about,.reviews,.contact{padding:65px 0}
+      .aboutGrid,.reviews,.contactInner{gap:34px}
+      .portraitFrame{width:min(280px,85vw);justify-self:center}
+      .aboutCopy h2{margin:12px 0 24px}
+      .reviewForm{padding:22px 18px;gap:18px}
+      .formTop h3{font-size:18px}
+      .contactInner>p:not(.sectionLabel){margin:0}
+      .contactLinks{width:100%;min-width:0}
+      .contactLinks a{min-width:0;gap:10px}
+      .contactLinks strong{font-size:13px;white-space:normal;overflow-wrap:anywhere}
+      footer{padding:28px 0}
+      .footerInner{gap:18px}
+    }
+  </style>
 </head>
 <body>
 <main id="top">
