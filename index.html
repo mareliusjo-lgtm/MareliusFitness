@@ -90,10 +90,17 @@ svg {
 .heroVisual,
 .sectionIntro > *,
 .processHeader > *,
+.processTeaserIntro > *,
+.processJourneyHeading > *,
+.processJourneyStep > *,
+.processFrameworkGrid > *,
 .galleryGrid > *,
 .aboutTeaserGrid > *,
 .fitGrid > *,
 .faqGrid > *,
+.faqTeaserGrid > *,
+.questionsHeroGrid > *,
+.questionsGroup > *,
 .contactInner > * {
   min-width: 0;
 }
@@ -666,6 +673,227 @@ h2 em {
   color: #aaa79f;
   font-size: 15px;
   line-height: 1.75;
+}
+
+/* Process teaser */
+
+.processTeaser {
+  position: relative;
+  overflow: hidden;
+}
+
+.processTeaser::before,
+.processJourney::before {
+  position: absolute;
+  top: -36%;
+  right: -11%;
+  width: 620px;
+  height: 620px;
+  border: 1px solid rgba(255, 255, 255, 0.055);
+  border-radius: 50%;
+  box-shadow: 0 0 0 90px rgba(255, 255, 255, 0.018), 0 0 0 180px rgba(255, 255, 255, 0.012);
+  content: "";
+  pointer-events: none;
+}
+
+.processTeaserIntro {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(330px, 0.48fr);
+  align-items: end;
+  gap: clamp(70px, 11vw, 155px);
+}
+
+.processTeaserIntro h2,
+.processJourneyHeading h2,
+.processFrameworkIntro h2,
+.faqTeaserCopy h2,
+.questionsSectionHeading h2 {
+  margin-top: 22px;
+  font-size: clamp(46px, 5.3vw, 76px);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.062em;
+}
+
+.processTeaserIntro h2 {
+  max-width: 820px;
+}
+
+.processTeaserIntro h2 em,
+.processJourneyHeading h2 em {
+  color: #f1845e;
+}
+
+.processTeaserCopy > p {
+  margin: 0 0 28px;
+  color: #aaa79f;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.processTeaserSteps {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 82px;
+  border-top: 1px solid var(--line-light);
+  border-bottom: 1px solid var(--line-light);
+}
+
+.processTeaserSteps > div {
+  display: grid;
+  gap: 42px;
+  min-height: 185px;
+  padding: 30px 38px 34px;
+  border-right: 1px solid var(--line-light);
+}
+
+.processTeaserSteps > div:last-child {
+  border-right: 0;
+}
+
+.processTeaserSteps span,
+.processJourneyNumber {
+  color: #f1845e;
+  font: 700 9px "Manrope", sans-serif;
+  letter-spacing: 0.12em;
+}
+
+.processTeaserSteps strong {
+  align-self: end;
+  color: white;
+  font: 700 21px "Manrope", sans-serif;
+  letter-spacing: -0.035em;
+}
+
+/* Process page */
+
+.processPageHero h1 {
+  font-size: clamp(52px, 5.9vw, 86px);
+}
+
+.processHeroVisual .aboutPageHeroImage img {
+  object-position: center 36%;
+}
+
+.processJourney {
+  position: relative;
+  overflow: hidden;
+}
+
+.processJourneyHeading {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr) minmax(300px, 0.5fr);
+  align-items: start;
+  gap: 54px;
+}
+
+.processJourneyHeading > p:last-child {
+  margin: 7px 0 0;
+  color: #aaa79f;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.processJourneyList {
+  position: relative;
+  z-index: 1;
+  margin-top: 86px;
+  border-top: 1px solid var(--line-light);
+}
+
+.processJourneyStep {
+  display: grid;
+  grid-template-columns: 110px minmax(320px, 1fr) minmax(260px, 0.62fr);
+  align-items: start;
+  gap: 42px;
+  padding: 44px 0;
+  border-bottom: 1px solid var(--line-light);
+}
+
+.processJourneyNumber {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(241, 132, 94, 0.62);
+  place-items: center;
+}
+
+.processJourneyCopy h3 {
+  color: white;
+  font-size: 30px;
+  letter-spacing: -0.045em;
+}
+
+.processJourneyCopy p {
+  max-width: 610px;
+  margin: 16px 0 0;
+  color: #aaa79f;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.processJourneyPoints {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.processJourneyPoints span {
+  padding: 9px 12px;
+  border: 1px solid var(--line-light);
+  color: #d0cdc6;
+  font: 700 9px "Manrope", sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.processFramework {
+  background: var(--paper-deep);
+}
+
+.processFrameworkGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(480px, 0.88fr);
+  align-items: start;
+  gap: clamp(70px, 11vw, 160px);
+}
+
+.processFrameworkIntro > p:last-child {
+  max-width: 570px;
+  margin: 28px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.78;
+}
+
+.processFrameworkList {
+  border-top: 1px solid var(--line);
+}
+
+.processFrameworkList > div {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  align-items: center;
+  gap: 18px;
+  min-height: 92px;
+  border-bottom: 1px solid var(--line);
+}
+
+.processFrameworkList span {
+  color: var(--accent);
+  font: 700 9px "Manrope", sans-serif;
+}
+
+.processFrameworkList strong {
+  font: 700 17px "Manrope", sans-serif;
+  letter-spacing: -0.025em;
 }
 
 /* Gallery */
@@ -1472,6 +1700,248 @@ h2 em {
   line-height: 1.75;
 }
 
+/* FAQ teaser */
+
+.faqTeaser {
+  background: var(--paper);
+}
+
+.faqTeaserGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(500px, 0.9fr);
+  align-items: center;
+  gap: clamp(75px, 12vw, 170px);
+}
+
+.faqTeaserCopy {
+  max-width: 600px;
+}
+
+.faqTeaserCopy > p:not(.sectionLabel) {
+  max-width: 500px;
+  margin: 28px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.78;
+}
+
+.faqTeaserPanel {
+  position: relative;
+  padding: 34px 38px 40px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  box-shadow: 0 26px 70px rgba(18, 18, 15, 0.08);
+}
+
+.faqTeaserCount {
+  display: block;
+  padding-bottom: 27px;
+  border-bottom: 1px solid var(--line);
+  color: var(--accent);
+  font: 700 9px "Manrope", sans-serif;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.faqTeaserPanel > div {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  align-items: center;
+  gap: 16px;
+  min-height: 83px;
+  border-bottom: 1px solid var(--line);
+}
+
+.faqTeaserPanel small {
+  color: var(--accent);
+  font: 700 9px "Manrope", sans-serif;
+}
+
+.faqTeaserPanel strong {
+  font: 700 16px "Manrope", sans-serif;
+  letter-spacing: -0.025em;
+}
+
+.faqTeaserPanel > a {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  margin: 28px 0 0 auto;
+  background: var(--ink);
+  color: white;
+  place-items: center;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.faqTeaserPanel > a:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Questions page */
+
+.questionsHero {
+  position: relative;
+  overflow: hidden;
+  padding-block: 72px 96px;
+}
+
+.questionsHero::before {
+  position: absolute;
+  top: 0;
+  right: -12%;
+  width: 48%;
+  height: 100%;
+  background: repeating-linear-gradient(90deg, transparent 0, transparent 79px, rgba(23, 23, 20, 0.035) 80px);
+  content: "";
+  pointer-events: none;
+}
+
+.questionsHeroGrid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(440px, 0.7fr);
+  align-items: center;
+  gap: clamp(70px, 10vw, 145px);
+}
+
+.questionsHeroCopy {
+  position: relative;
+  z-index: 1;
+}
+
+.questionsHero h1 {
+  max-width: 800px;
+  margin: 26px 0 30px;
+  font-size: clamp(62px, 7vw, 102px);
+  font-weight: 700;
+  line-height: 0.94;
+  letter-spacing: -0.067em;
+}
+
+.questionsHeroPanel {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  min-height: 570px;
+  padding: 42px;
+  overflow: hidden;
+  background: var(--ink);
+  color: white;
+}
+
+.questionsHeroPanel::after {
+  position: absolute;
+  right: -120px;
+  bottom: -190px;
+  width: 430px;
+  height: 430px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  box-shadow: 0 0 0 65px rgba(255, 255, 255, 0.025), 0 0 0 130px rgba(255, 255, 255, 0.015);
+  content: "";
+}
+
+.questionsHeroPanel > div {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.questionsHeroPanel > div span,
+.questionsHeroIndex {
+  color: #f1845e;
+  font: 700 9px "Manrope", sans-serif;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.questionsHeroPanel > div strong {
+  color: white;
+  font: 700 76px/0.85 "Manrope", sans-serif;
+  letter-spacing: -0.07em;
+}
+
+.questionsHeroPanel h2 {
+  max-width: 400px;
+  margin-top: 72px;
+  font-size: 31px;
+  line-height: 1.12;
+  letter-spacing: -0.05em;
+}
+
+.questionsHeroPanel ul {
+  align-self: end;
+  margin: 55px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.questionsHeroPanel li {
+  padding: 13px 0;
+  border-top: 1px solid var(--line-light);
+  color: #bbb8b1;
+  font-size: 13px;
+}
+
+.questionsHeroIndex {
+  position: absolute;
+  z-index: 1;
+  right: 25px;
+  bottom: 20px;
+}
+
+.questionsSection {
+  background: var(--paper-deep);
+}
+
+.questionsSectionHeading {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 850px);
+  gap: 54px;
+}
+
+.questionsGroups {
+  margin-top: 86px;
+}
+
+.questionsGroup {
+  display: grid;
+  grid-template-columns: minmax(210px, 0.42fr) minmax(520px, 1fr);
+  gap: clamp(60px, 10vw, 145px);
+  padding-block: 72px;
+  border-top: 1px solid var(--line);
+}
+
+.questionsGroup:last-child {
+  padding-bottom: 0;
+}
+
+.questionsGroupLabel {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  height: max-content;
+}
+
+.questionsGroupLabel span {
+  font: 700 24px "Manrope", sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.questionsGroupLabel small {
+  color: var(--accent);
+  font: 700 9px "Manrope", sans-serif;
+}
+
+.questionsList {
+  border-top: 0;
+}
+
+.questionsList details:first-child {
+  border-top: 1px solid var(--line);
+}
+
 /* Contact and footer */
 
 .contact {
@@ -1841,6 +2311,45 @@ h2 em {
   .aboutStoryHeading > p:last-child {
     grid-column: 2;
   }
+
+  .processTeaserIntro {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.52fr);
+    gap: 64px;
+  }
+
+  .processJourneyHeading {
+    grid-template-columns: 150px minmax(0, 1fr);
+  }
+
+  .processJourneyHeading > p:last-child {
+    grid-column: 2;
+    max-width: 650px;
+  }
+
+  .processJourneyStep {
+    grid-template-columns: 80px minmax(300px, 1fr) minmax(220px, 0.55fr);
+    gap: 30px;
+  }
+
+  .processFrameworkGrid,
+  .faqTeaserGrid {
+    grid-template-columns: minmax(0, 0.8fr) minmax(420px, 0.9fr);
+    gap: 64px;
+  }
+
+  .questionsHeroGrid {
+    grid-template-columns: minmax(0, 0.86fr) minmax(390px, 0.7fr);
+    gap: 58px;
+  }
+
+  .questionsHero h1 {
+    font-size: clamp(56px, 7vw, 84px);
+  }
+
+  .questionsGroup {
+    grid-template-columns: 180px minmax(480px, 1fr);
+    gap: 60px;
+  }
 }
 
 @media (max-width: 880px) {
@@ -1895,6 +2404,13 @@ h2 em {
   .aboutPageHeroGrid,
   .aboutStoryHeading,
   .aboutValuesHeading,
+  .processTeaserIntro,
+  .processJourneyHeading,
+  .processFrameworkGrid,
+  .faqTeaserGrid,
+  .questionsHeroGrid,
+  .questionsSectionHeading,
+  .questionsGroup,
   .fitGrid,
   .faqGrid,
   .contactInner,
@@ -2035,6 +2551,61 @@ h2 em {
   }
 
   .aboutPageCtaInner > div:last-child {
+    max-width: 620px;
+  }
+
+  .processTeaserIntro,
+  .faqTeaserGrid,
+  .questionsHeroGrid {
+    gap: 54px;
+  }
+
+  .processTeaserSteps {
+    margin-top: 62px;
+  }
+
+  .processJourneyHeading,
+  .questionsSectionHeading {
+    gap: 28px;
+  }
+
+  .processJourneyHeading > p:last-child {
+    grid-column: auto;
+    max-width: 650px;
+  }
+
+  .processJourneyStep {
+    grid-template-columns: 70px 1fr;
+    gap: 24px;
+  }
+
+  .processJourneyPoints {
+    grid-column: 2;
+    justify-content: flex-start;
+  }
+
+  .processFrameworkGrid {
+    gap: 62px;
+  }
+
+  .faqTeaserPanel {
+    width: min(100%, 720px);
+  }
+
+  .questionsHero {
+    padding-top: 42px;
+  }
+
+  .questionsHeroPanel {
+    min-height: 480px;
+  }
+
+  .questionsGroup {
+    gap: 32px;
+    padding-block: 58px;
+  }
+
+  .questionsGroupLabel {
     max-width: 620px;
   }
 
@@ -2294,6 +2865,11 @@ h2 em {
   .aboutStoryHeading h2,
   .aboutValuesHeading h2,
   .aboutPageCta h2,
+  .processTeaserIntro h2,
+  .processJourneyHeading h2,
+  .processFrameworkIntro h2,
+  .faqTeaserCopy h2,
+  .questionsSectionHeading h2,
   .fitGrid h2,
   .faqIntro h2 {
     font-size: clamp(40px, 12.6vw, 56px);
@@ -2328,6 +2904,74 @@ h2 em {
 
   .processStep h3 {
     font-size: 21px;
+  }
+
+  .processTeaserSteps {
+    grid-template-columns: 1fr;
+    margin-top: 46px;
+  }
+
+  .processTeaserSteps > div {
+    grid-template-columns: 34px 1fr;
+    align-items: center;
+    gap: 12px;
+    min-height: 78px;
+    padding: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line-light);
+  }
+
+  .processTeaserSteps > div:last-child {
+    border-bottom: 0;
+  }
+
+  .processTeaserSteps strong {
+    align-self: auto;
+    font-size: 17px;
+  }
+
+  .processJourneyList {
+    margin-top: 48px;
+  }
+
+  .processJourneyStep {
+    grid-template-columns: 48px 1fr;
+    gap: 14px;
+    padding: 30px 0;
+  }
+
+  .processJourneyNumber {
+    width: 38px;
+    height: 38px;
+  }
+
+  .processJourneyCopy h3 {
+    font-size: 23px;
+  }
+
+  .processJourneyCopy p {
+    font-size: 14px;
+  }
+
+  .processJourneyPoints {
+    grid-column: 2;
+  }
+
+  .processJourneyPoints span {
+    font-size: 8px;
+  }
+
+  .processFrameworkGrid {
+    gap: 46px;
+  }
+
+  .processFrameworkList > div {
+    grid-template-columns: 38px 1fr;
+    min-height: 82px;
+  }
+
+  .processFrameworkList strong {
+    font-size: 15px;
   }
 
   .galleryGrid {
@@ -2540,6 +3184,76 @@ h2 em {
     padding-bottom: 26px;
   }
 
+  .faqTeaserGrid {
+    gap: 40px;
+  }
+
+  .faqTeaserPanel {
+    padding: 27px 21px 30px;
+  }
+
+  .faqTeaserPanel > div {
+    grid-template-columns: 30px 1fr;
+    min-height: 76px;
+  }
+
+  .faqTeaserPanel strong {
+    font-size: 14px;
+  }
+
+  .questionsHero {
+    padding: 28px 0 68px;
+  }
+
+  .questionsHeroGrid {
+    gap: 38px;
+  }
+
+  .questionsHero .aboutBack {
+    margin-bottom: 34px;
+  }
+
+  .questionsHero h1 {
+    margin: 22px 0 25px;
+    font-size: clamp(48px, 14.5vw, 66px);
+    line-height: 0.96;
+  }
+
+  .questionsHeroPanel {
+    min-height: 430px;
+    padding: 28px 24px;
+  }
+
+  .questionsHeroPanel > div strong {
+    font-size: 64px;
+  }
+
+  .questionsHeroPanel h2 {
+    margin-top: 54px;
+    font-size: 26px;
+  }
+
+  .questionsHeroPanel ul {
+    margin-top: 42px;
+  }
+
+  .questionsSectionHeading {
+    gap: 22px;
+  }
+
+  .questionsGroups {
+    margin-top: 52px;
+  }
+
+  .questionsGroup {
+    gap: 25px;
+    padding-block: 46px;
+  }
+
+  .questionsGroupLabel span {
+    font-size: 21px;
+  }
+
   .contact {
     padding-block: 82px;
   }
@@ -2636,13 +3350,13 @@ h2 em {
         <span class="brandName">Marelius Johannessen <small>Coach</small></span>
       </a>
       <div class="navLinks">
-        <a href="#coaching">Coaching</a><a href="#slik-fungerer-det">Prosessen</a><a href="om-meg.html">Om meg</a><a href="#sporsmal">Spørsmål</a>
+        <a href="#coaching">Coaching</a><a href="prosessen.html">Prosessen</a><a href="om-meg.html">Om meg</a><a href="sporsmal.html">Spørsmål</a>
       </div>
       <a class="navCta" href="#kontakt">Ta kontakt <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M7 5h8v8"/></svg></a>
       <button class="menuButton" type="button" aria-label="Åpne meny" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
     </nav>
     <div class="mobileMenu" id="mobile-menu">
-      <a href="#coaching">Coaching <span>01</span></a><a href="#slik-fungerer-det">Prosessen <span>02</span></a><a href="om-meg.html">Om meg <span>03</span></a><a href="#sporsmal">Spørsmål <span>04</span></a>
+      <a href="#coaching">Coaching <span>01</span></a><a href="prosessen.html">Prosessen <span>02</span></a><a href="om-meg.html">Om meg <span>03</span></a><a href="sporsmal.html">Spørsmål <span>04</span></a>
       <a class="mobileMenuCta" href="#kontakt">Ta kontakt <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M7 5h8v8"/></svg></a>
     </div>
   </header>
@@ -2682,12 +3396,18 @@ h2 em {
       </div>
     </section>
 
-    <section class="process sectionDark" id="slik-fungerer-det">
-      <div class="processHeader shell"><p class="sectionLabel light">Slik fungerer det</p><h2>Fra mål til en plan du kan <em>gjennomføre.</em></h2></div>
-      <div class="processGrid shell">
-        <article class="processStep"><span class="stepNumber">01</span><div><h3>Vi kartlegger</h3><p>Vi starter med utgangspunktet ditt, erfaringen din, hverdagen din og det du ønsker å oppnå.</p></div></article>
-        <article class="processStep"><span class="stepNumber">02</span><div><h3>Du får en plan</h3><p>Jeg setter sammen et konkret opplegg for trening og kosthold som gir deg en tydelig retning.</p></div></article>
-        <article class="processStep"><span class="stepNumber">03</span><div><h3>Vi følger opp</h3><p>Vi vurderer utviklingen og gjør justeringer, slik at planen fortsetter å fungere over tid.</p></div></article>
+    <section class="processTeaser sectionDark" id="slik-fungerer-det">
+      <div class="processTeaserIntro shell">
+        <div><p class="sectionLabel light">Slik fungerer det</p><h2>Fra mål til en plan du kan <em>gjennomføre.</em></h2></div>
+        <div class="processTeaserCopy">
+          <p>En enkel og tydelig prosess gjør det lettere å vite hva som skjer – både før du starter og mens vi jobber sammen.</p>
+          <a class="buttonLink" href="prosessen.html">Se hele prosessen <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h14M12 5l5 5-5 5"/></svg></a>
+        </div>
+      </div>
+      <div class="processTeaserSteps shell" aria-label="Prosessen i tre steg">
+        <div><span>01</span><strong>Vi kartlegger</strong></div>
+        <div><span>02</span><strong>Du får en plan</strong></div>
+        <div><span>03</span><strong>Vi følger opp</strong></div>
       </div>
     </section>
 
@@ -2733,14 +3453,20 @@ h2 em {
       </div>
     </section>
 
-    <section class="faq section" id="sporsmal">
-      <div class="faqGrid shell">
-        <div class="faqIntro"><p class="sectionLabel">Ofte stilte spørsmål</p><h2>Det viktigste før du <em>starter.</em></h2><p>Finner du ikke svaret du trenger? Send meg en e-post, så svarer jeg så godt jeg kan.</p></div>
-        <div class="faqList">
-          <details><summary><span>01</span><strong>Er opplegget tilpasset meg?</strong><i></i></summary><p>Ja. Planen bygges rundt nivået ditt, målene dine, hverdagen din og hva du faktisk har mulighet til å gjennomføre.</p></details>
-          <details><summary><span>02</span><strong>Får jeg hjelp med både trening og kosthold?</strong><i></i></summary><p>Ja. Coachingen er helhetlig og inkluderer en personlig treningsplan, et komplett kostholdsopplegg og hjelp med spørsmål underveis.</p></details>
-          <details><summary><span>03</span><strong>Kan planen endres underveis?</strong><i></i></summary><p>Ja. Behov og progresjon kan endre seg. Derfor vurderes opplegget fortløpende og justeres når det er nødvendig.</p></details>
-          <details><summary><span>04</span><strong>Hvordan kommer jeg i gang?</strong><i></i></summary><p>Fyll ut kontaktskjemaet og fortell kort om målet ditt. Derfra finner vi ut om coachingen passer for deg.</p></details>
+    <section class="faqTeaser section" id="sporsmal">
+      <div class="faqTeaserGrid shell">
+        <div class="faqTeaserCopy">
+          <p class="sectionLabel">Ofte stilte spørsmål</p>
+          <h2>Det viktigste før du <em>starter.</em></h2>
+          <p>Få tydelige svar om tilpasning, trening, kosthold, oppfølging og hvordan du kommer i gang.</p>
+          <a class="buttonLink dark" href="sporsmal.html">Se alle spørsmål og svar <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h14M12 5l5 5-5 5"/></svg></a>
+        </div>
+        <div class="faqTeaserPanel">
+          <span class="faqTeaserCount">Spørsmål / 08</span>
+          <div><small>01</small><strong>Er opplegget tilpasset meg?</strong></div>
+          <div><small>02</small><strong>Får jeg hjelp med trening og kosthold?</strong></div>
+          <div><small>03</small><strong>Kan planen endres underveis?</strong></div>
+          <a href="sporsmal.html" aria-label="Åpne alle spørsmål og svar"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M7 5h8v8"/></svg></a>
         </div>
       </div>
     </section>
